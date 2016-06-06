@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  if(user)
+    table(class="table table-hover")
+      thead
+          tr
+              th Фото
+              th Имя
+              th Иду/Не иду
+              th Напитки
+      tbody
+          each friend, i in friends
+              tr
+                  td
+                    img(src="#{friend.photo}", alt="", class="img-circle")
+                  td #{friend.name}
+                  td #{friend.go_to_party}
+                  td #{friend.beverages}

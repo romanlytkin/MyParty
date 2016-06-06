@@ -1,0 +1,58 @@
+extends layout
+
+block content
+    div(class="jumbotron forma col-lg-12")
+      if (error.length > 0)
+        h3 #{error}
+      form(action="/add" method="post")
+        div(class="form-group")
+          div(class="col-lg-4")
+            lable(class="form-control-label") Иду/Не иду:
+          div(class="col-lg-8")
+            select(id="goparty", name="goparty", class="form-control")
+              if(goparty == "0")
+                option(value="0", selected="selected") Выберите вариант
+              else
+                option(value="0") Выберите вариант
+
+              if(goparty == "Иду")
+                option(value="Иду", selected="selected") Иду
+              else
+                option(value="Иду") Иду
+
+              if(goparty == "Не иду")
+                option(value="Не иду", selected="selected") Не иду
+              else
+                option(value="Не иду") Не иду
+        div(class="form-group")
+          div(class="col-lg-4")
+            lable(class="form-control-label") Напитки:
+          div(class="col-lg-8")
+            select(id="beverages", name="beverages", class="form-control")
+              if(beverages == "0")
+                option(value="0", selected="selected") Выберите вариант
+              else
+                option(value="0") Выберите вариант
+
+              if(beverages == "Мартини")
+                option(value="Мартини", selected="selected") Мартини
+              else
+                option(value="Мартини") Мартини
+
+              if(beverages == "Водка")
+                option(value="Водка", selected="selected") Водка
+              else
+                option(value="Водка") Водка
+
+              if(beverages == "Сок")
+                option(value="Сок", selected="selected") Сок
+              else
+                option(value="Сок") Сок
+
+              if(beverages == "Вино")
+                option(value="Вино", selected="selected") Вино
+              else
+                option(value="Вино") Вино
+        div(class="form-group text-right")
+          div(class="col-lg-12")
+            button(type="submit", class="btn btn-success") Хочу на вечеринку

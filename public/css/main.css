@@ -1,0 +1,73 @@
+body {
+    background: #f2f2f2;
+}
+
+html{ height: 100%; }
+body{ display: flex; flex-direction: column; height: 100%; }
+
+header{
+   flex: 0 0 auto;
+}
+
+.main-content{
+   flex: 1 0 auto;
+}
+
+footer{
+   flex: 0 0 auto;
+   text-align: right;
+   background-color: black;
+   color: white;
+}
+
+.greetings {
+  width: 60vw;
+  text-align: center;
+  margin-top: 20vh;
+  margin-left: 20vw;
+}
+
+.forma {
+  width: 60vw;
+  text-align: center;
+  margin-top: 10vh;
+  margin-left: 20vw;
+}
+
+.soc-auth, .out {
+  display: inline-block;
+}
+
+.social {
+  margin-left: 3vw;
+}
+
+.img-circle {
+  border-radius: 50%;
+}
+
+.top, .top a {
+  color: white;
+}
+
+.top {
+   text-align: right;
+   margin-right: 1vw;
+}
+
+.glf-out {
+  margin-left: 1vw;
+}
+
+.name {
+  margin-left: 1vw;
+  margin-top: 10px;
+}
+
+.navbar-inverse, .nav-pills li a {
+  border-radius: 0px;
+}
+
+.nav-pills li a:hover {
+  color: black;
+}

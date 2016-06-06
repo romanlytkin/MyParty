@@ -1,0 +1,20 @@
+{
+  "name": "my_party",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "connect-flash": "*",
+    "connect-memcached": "*",
+    "express": "3.4.8",
+    "express-session": "*",
+    "jade": "*",
+    "nconf": "*",
+    "express-mail": "*",
+    "passport": "*",
+    "passport-vkontakte": "*",
+    "mysql": "^2.5.4"
+  }
+}

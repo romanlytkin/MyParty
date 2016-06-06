@@ -1,0 +1,48 @@
+{
+    "app": {
+        "host": "localhost",
+        "port": 8000,
+        "schema": "http",
+        "url": "http://localhost:8000"
+    },
+
+    "adminid": "<ID VK user>",
+
+    "adminemail": "<admin E-mail>",
+
+    "dbconnection": {
+      "host"     : "localhost",
+      "user"     : "root",
+      "password" : "root123",
+      "database" : "myparty"
+    },
+
+    "session": {
+        "secret": "it:demo:secret",
+        "key": "sid",
+        "cookie": {
+            "path": "/",
+            "httpOnly": true,
+            "maxAge": null
+        }
+    },
+
+    "memcached": {
+        "hosts": ["127.0.0.1:11211"],
+        "prefix": "it:demo:023:"
+    },
+
+    "auth": {
+        "vk": {
+            "app_id": 5493351,
+            "secret": "OyDchY0hX5ez9ajMBPIh"
+        }
+    },
+
+    "mailer": {
+        "auth": {
+            "user": "<E-mail server sender>",
+            "pass": "<Password server sender>"
+        }
+    }
+}

@@ -1,0 +1,32 @@
+doctype html
+html
+  head
+    title MyParty
+    link(rel="shortcut icon", href="/favicon.ico")
+    link(rel='stylesheet', href='/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/css/main.css')
+    meta(name="robots", content="noindex,nofollow")
+  body
+    if(user)
+      header
+        nav(class="navbar navbar-inverse")
+          ul(class="nav nav-pills navbar-right top")
+            li
+              img(src="#{user.photoUrl}", alt="", class="img-circle")
+            li
+              div(class="name") Привет, #{user.username} |
+            li
+              a(href="/sign-out") Выйти
+                span(class="glyphicon glyphicon-log-out glf-out")
+
+    else
+      div(class="jumbotron greetings")
+        h2 Вы не авторизованы!
+        a(href="/auth/vk")
+          div(class="soc-auth") Войти через
+            img(src="/images/vk.png", alt="vk", height="42", width="42", class="social")
+    div(class="main-content")
+      block content
+    if(user)
+      footer
+        span E-mail администратора #{email}
