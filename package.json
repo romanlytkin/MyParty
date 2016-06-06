@@ -11,6 +11,7 @@
     "express": "3.4.8",
     "express-session": "*",
     "jade": "*",
+    "emailjs": "*",
     "nconf": "*",
     "express-mail": "*",
     "passport": "*",
