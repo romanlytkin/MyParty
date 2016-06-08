@@ -12,11 +12,12 @@ var smtpTransport = nodemailer.createTransport("SMTP",{
 //---------------------------------------
 
 var mysql = require('mysql-model');
+//connect db
 var connection = mysql.createConnection({
-  host     : config.get("dbconnection:host"),
-  user     : config.get("dbconnection:user"),
-  password : config.get("dbconnection:password"),
-  database : config.get("dbconnection:database")
+    host     : config.get("dbconnection:host"),
+    user     : config.get("dbconnection:user"),
+    password : config.get("dbconnection:password"),
+    database : config.get("dbconnection:database")
 });
 
 var Friends = connection.extend({
@@ -32,7 +33,7 @@ module.exports = {
         }
         else {
           friends.find('first', {where: "vk_id = " + req.user.id}, function(err, rows, fields) {
-                if (rows.length == 0) {
+                if (!rows) {
                   res.redirect('/add');
                 }
                 else {
