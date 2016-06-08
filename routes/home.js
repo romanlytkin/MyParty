@@ -1,4 +1,5 @@
 var config = require("nconf");
+var controllers = require('../controllers/basecontroller.js');
 
 module.exports = function (app) {
     app.get('/', function (req, res) {
@@ -15,4 +16,14 @@ module.exports = function (app) {
           email: config.get("adminemail")
         });
     });
+
+    app.get('/admin', controllers.admin);
+
+    app.get('/add', controllers.addget);
+
+    app.post('/add', controllers.addpost);
+
+    app.get('/edit', controllers.editget);
+
+    app.post('/edit', controllers.editpost);
 };
